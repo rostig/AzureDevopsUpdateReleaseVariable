@@ -1,0 +1,14 @@
+{
+  "name": "update-release-variable",
+  "version": "1.0.0",
+  "description": "Azure DevOps Pipeline task that can update release variable of running release. If variable does not exists it will be created.",
+  "main": "index.js",
+  "author": "Rostislav Gerasimov",
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.9.3",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.8"
+  },
+  "devDependencies": {}
+}

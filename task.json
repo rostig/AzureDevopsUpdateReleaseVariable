@@ -1,0 +1,39 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+	"id": "bdcc293e-d11b-4aeb-b09c-ae76e5746428",
+	"name": "CrossPlatformUpdateReleaseVariable",
+	"friendlyName": "Update Release Variable",
+	"description": "This task updates variable of running release. If variables does not exists - it will be created. Requires - Allow scripts to access the OAuth token. Works cross platform.",
+	"helpMarkDown": "",
+	"category": "Utility",
+	"author": "Rostislav Gerasimov",
+	"version": {
+		"Major": 1,
+		"Minor": 0,
+		"Patch": 11
+	},
+	"instanceNameFormat": "Update Release Variable: $(variableName)=$(variableValue)",
+	"inputs": [
+		{
+			"name": "variableName",
+			"type": "string",
+			"label": "Variable name",
+			"helpMarkDown": "Enter name of variable",
+			"required": true,
+			"defaultValue" : ""
+		},
+		{
+			"name": "variableValue",
+			"type": "string",
+			"label": "Variable value",
+			"helpMarkDown": "Enter value of variable",
+			"required": true,
+			"defaultValue" : ""
+		}
+	],
+	"execution": {
+		"Node10": {
+			"target": "index.js"
+		}
+	}
+}
